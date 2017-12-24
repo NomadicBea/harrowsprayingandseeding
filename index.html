@@ -1,0 +1,535 @@
+<html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" type="text/css" href="Harrowstyle.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Lato|Merriweather" rel="stylesheet">
+    <title>HarroW Spraying and Seeding</title>
+    <meta name="description" content="Owned and operated by the Worrall family, we offer a range of services within
+                                    Southern Alberta including vegetation control, mowing, snow removal, and sanding. ">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://use.fontawesome.com/1fbe5dfa57.js"></script>
+    
+    <style>
+  
+        body, html {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+        }
+        .heroimg {
+            background-image: url("https://images.unsplash.com/photo-1470434158598-88e7ad324132?auto=format&fit=crop&w=2252&q=80&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D");
+            min-height: 100%;
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            z-index: -99;
+        }
+        .logo{
+            width:170px;
+            margin: 0 auto .2em auto;
+            display: block;
+            z-index: 99;
+            padding-top: 10%;
+        }
+        @media (max-width: 415px) {
+            #logo {
+                padding-top: 30%;
+                width: 60%;
+            }
+        }
+
+        .downArrow{
+            position: absolute;
+            color: #ffffff;
+            color: rgba(255, 255, 255, 0.7);
+            position: absolute;
+            bottom: 10px;
+            left:50%;
+            margin-left: -30px;
+            -o-transition:.3s;
+            -ms-transition:.3s;
+            -moz-transition:.3s;
+            -webkit-transition:.3s;
+            transition:.3s;
+            font-size:1.5em;
+        }
+
+        .downArrow:hover{
+            color: #ffffff;
+            color: rgba(255, 255, 255, 1);
+        }
+
+        .info {
+            height: auto;
+            margin-top: 0px;
+            margin: 7%;
+        }
+        .snowimg {
+            background-image: url("https://images.unsplash.com/photo-1485123263479-f5ea30a2f92d?auto=format&fit=crop&w=1334&q=80");
+            min-height: 100%;
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            z-index: -99;
+        }
+        .services {
+            height: 350px;
+            margin-top: 0px;
+            margin: 7%;
+        }
+        h1 {
+            font-family: 'Merriweather', serif;
+            text-align: center;
+            color: #3d5b86;
+        }
+        h5, h6 {
+            font-family: 'Merriweather', serif;
+            text-align: center;
+            color: #bf9b30;
+        }
+        p{
+            font-family: 'Merriweather', serif;
+            text-align: center;
+            color: #3d5b86;
+            font-size: .5em;
+        }
+        table {
+            font-family: 'Lato', sans-serif;
+            color: #3d5b86;
+            border-collapse: collapse;
+            width: 100%;
+            box-shadow: 1px 2px 1px lightgrey;
+            background-color: snow;
+            margin-top: 10%;
+        }
+
+        td, th {
+            border: 1px solid #3d5b86;
+            text-align: left;
+            padding: 3px;
+        }
+
+        td p{
+            font-size: .8em;
+        }
+
+        tr:nth-child(even) {
+            background-color: #bf9b30;
+            color: white;
+        }
+        th{
+            font-size: 1em;
+        }
+        td{
+            font-size: .6em;
+        }
+
+        #gallery{
+            border-top: 1px solid #bf9b30;
+            margin: 10% 7% 0 7%;
+            padding-top: 10%;
+        }
+
+        /* Position the image container (needed to position the left and right arrows) */
+        .container {
+            position: relative;
+            height: auto;
+            margin: 5% 7% 0 7%;
+        }
+
+        /* Hide the images by default */
+        .mySlides {
+            display: none;
+        }
+
+        /* Add a pointer when hovering over the thumbnail images */
+        .cursor {
+            cursor: pointer;
+        }
+
+        /* Next & previous buttons */
+        .prev,
+        .next {
+            cursor: pointer;
+            position: absolute;
+            top: 40%;
+            width: auto;
+            padding: 16px;
+            margin-top: -50px;
+            color: white;
+            font-weight: bold;
+            font-size: 20px;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+            -webkit-user-select: none;
+        }
+
+        /* Position the "next button" to the right */
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+
+        /* On hover, add a black background color with a little bit see-through */
+        .prev:hover,
+        .next:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        /* Number text (1/3 etc) */
+        .numbertext {
+            color: #f2f2f2;
+            font-size: 12px;
+            padding: 8px 12px;
+            position: absolute;
+            top: 0;
+        }
+
+        /* Container for image text */
+        .caption-container {
+            text-align: center;
+            background-color: #222;
+            padding: 2px 16px;
+            color: white;
+        }
+
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /* Six columns side by side */
+        .column {
+            float: left;
+            width: 16.66%;
+        }
+
+        /* Add a transparency effect for thumnbail images */
+        .demo {
+            opacity: 0.6;
+        }
+
+        .active,
+        .demo:hover {
+            opacity: 1;
+        }
+        .contact {
+            padding-top: 10%;
+            border-top: 1px solid #bf9b30;
+            height: auto;
+            margin: 20% 7% 20% 7%;
+        }
+        .footer {
+            height: auto;
+            background-color: #3d5b86;
+        }
+
+        .footer > .logo {
+            width:100px;
+            margin: 0 auto .2em auto;
+            display: block;
+            z-index: 99;
+            padding: 7%;
+
+        }
+
+        #backtotop  {
+            font-family: 'Merriweather', serif;
+            color: black;
+            font-size: .75em;
+            margin-left: 10px;
+            border: 1px solid #bf9b30;
+            border-radius: 3px;
+            background-color: snow;
+        }
+        h5 > ul{
+            font-size: .8em;
+            text-align: center;
+            color: #3d5b86;
+        }
+        li > i {
+            padding-right: 3px;
+        }
+        a{
+            text-decoration: none;
+            color: green;
+            cursor: pointer;
+        }
+
+
+    </style>
+
+
+</head>
+<body>
+
+    <div class="heroimg">
+        <img class="logo" src="https://scontent.fyyc4-1.fna.fbcdn.net/v/t1.0-9/25398718_10154990128192321_7186177683323282119_n.jpg?oh=a0ccb5c4068da11693cc27392de41230&oe=5ACE57B2"/>
+    </div>
+        <a class="downArrow"><i class="fa fa-angle-double-down fa-3x" aria-hidden="true"></i></a>
+
+<!--Information page-->
+
+    <div class="info">
+        <h1>What We Do</h1>
+        <h6>Oilfield & Land Reclamation<br>
+            Acreage & Small Farms</h6>
+                <p>
+                    Owned and operated by the Worrall family, we offer a range of services within Southern Alberta including
+                    vegetation control, mowing, snow removal, and sanding. As Certified Agricultural and Industrial pesticide
+                    applicators, our services are ideal for vegetation control for oil leases and plants, CBM wells, pipelines, roadways,
+                    industrial lots, small farms, acreages, and spot spraying pastures.
+                </p>
+                <br>
+                <br>
+                <h6>Company Information</h6>
+                <p>
+                    Certified agricultural/industrial pesticide applicator license #15535<br>
+                    Comply works / INS NETWORLD membership<br>
+                    First aid / H2S Alive / IRP 16 / WHIMS / TDG<br>
+                    PST <br>
+                    WCB Coverage <br>
+                    $2 000 000 commercial and automobile insurance <br>
+                    Spray drift endorsement
+
+                </p>
+        <h5><i>"Nothing Runs Like a Deere"</i></h5>
+    </div>
+
+
+    <div class="snowimg">
+        <img class="logo" src="https://scontent.fyyc4-1.fna.fbcdn.net/v/t1.0-9/25398718_10154990128192321_7186177683323282119_n.jpg?oh=a0ccb5c4068da11693cc27392de41230&oe=5ACE57B2"/>
+    </div>
+
+
+<!--Price Table-->
+    <div class="services">
+        <h1>Services and Pricing</h1>
+        <table>
+            <tr>
+                <th>Services</th>
+                <th>Price Per Hour</th>
+                </tr>
+                    <tr>
+                        <td>Vegetation Control<br>
+                        <p>Truck Mount Sprayer<br>
+                            John Deere Side by Side</p></td>
+                        <td>$100/Hr</td>
+                    </tr>
+                    <tr>
+                        <td>Mowing <br>
+                        <p> John Deere Tractor with 7ft mower</p></td>
+                        <td>$125/Hr</td>
+                    </tr>
+                    <tr>
+                        <td>String Trim</td>
+                        <td>$50/Operator</td>
+                    </tr>
+                    <tr>
+                        <td>Snow Removal / Sanding<br>
+                            <p>Truck Mount BOSS Plow / Sand Unit</p></td>
+                        <td>$100/Hr</td>
+                    </tr>
+        </table>
+    </div>
+
+
+<!--Slide Show-->
+    <h1 id="gallery" style="text-align:center">Gallery</h1>
+
+    <div class="container">
+        <div class="mySlides">
+            <div class="numbertext">1 / 14</div>
+            <img src="https://scontent.fyyc4-1.fna.fbcdn.net/v/t31.0-8/194989_223747824428322_205754554_o.jpg?oh=a4be18c38f01b87497ed6c208919ee1a&oe=5AD27A25" style="width:100%">
+        </div>
+
+        <div class="mySlides">
+            <div class="numbertext">2 / 14</div>
+            <img src="https://scontent.fyyc4-1.fna.fbcdn.net/v/t1.0-9/58629_223759614427143_135690112_n.jpg?oh=8e12b28fdafc53ba471369947e720213&oe=5AB38134" style="width:100%">
+        </div>
+
+        <div class="mySlides">
+            <div class="numbertext">3 / 14</div>
+            <img src="https://scontent.fyyc4-1.fna.fbcdn.net/v/t31.0-8/1264128_416444881825281_199312143_o.jpg?oh=7a84a84e5c98675adb95de5ad6eaa5f2&oe=5AB9734D" style="width:100%">
+        </div>
+
+        <div class="mySlides">
+            <div class="numbertext">4 / 14</div>
+            <img src="https://scontent.fyyc4-1.fna.fbcdn.net/v/t1.0-9/537875_223759417760496_1185323917_n.jpg?oh=27c4ef3846299360889a1500f19088df&oe=5AC3A01A" style="width:100%">
+        </div>
+
+        <div class="mySlides">
+            <div class="numbertext">5 / 14</div>
+            <img src="https://scontent.fyyc4-1.fna.fbcdn.net/v/t1.0-9/13260025_781841071952325_237179310632671073_n.jpg?oh=6c49ef762c1ca3446c4092cb4cad78e0&oe=5ABDCB5F" style="width:100%">
+        </div>
+
+        <div class="mySlides">
+            <div class="numbertext">6 / 14</div>
+            <img src="https://scontent.fyyc4-1.fna.fbcdn.net/v/t1.0-9/13221648_781841025285663_6143779057323927002_n.jpg?oh=5eb80ea8bcce984af8430380c019d45b&oe=5ABA318D" style="width:100%">
+        </div>
+        <div class="mySlides">
+            <div class="numbertext">7 / 14</div>
+            <img src="https://scontent.fyyc4-1.fna.fbcdn.net/v/t1.0-9/13244767_781840898619009_5143474085788552677_n.jpg?oh=dbd6b3ada6973ce2dbc2a524d476e66b&oe=5AD10FB8" style="width:100%">
+        </div>
+        <div class="mySlides">
+            <div class="numbertext">8 / 14</div>
+            <img src="https://scontent.fyyc4-1.fna.fbcdn.net/v/t31.0-8/1116137_326279237508513_1112929107_o.jpg?oh=494878ccbdf2e20f307d856ebe5a6e1d&oe=5AD4E037" style="width:100%">
+        </div>
+        <div class="mySlides">
+            <div class="numbertext">9 / 14</div>
+            <img src="https://scontent.fyyc4-1.fna.fbcdn.net/v/t1.0-9/10570348_487079378095164_6934831621949232926_n.jpg?oh=9324623b0cdbb354360c3116eee59799&oe=5ACF40E3" style="width:100%">
+        </div>
+        <div class="mySlides">
+            <div class="numbertext">10 / 14</div>
+            <img src="https://scontent.fyyc4-1.fna.fbcdn.net/v/t1.0-9/13230060_781840938619005_5063998434752121489_n.jpg?oh=08efab7a975f861007bed49fbb968783&oe=5AC8C376" style="width:100%">
+        </div>
+        <div class="mySlides">
+            <div class="numbertext">11 / 14</div>
+            <img src="https://scontent.fyyc4-1.fna.fbcdn.net/v/t1.0-9/10603703_487940468009055_2836829722587862704_n.jpg?oh=90d63cf1c2a449acbf201475a52a7067&oe=5ACCD92D" style="width:100%">
+        </div>
+        <div class="mySlides">
+            <div class="numbertext">12 / 14</div>
+            <img src="https://scontent.fyyc4-1.fna.fbcdn.net/v/t1.0-9/11283_495926220543813_1409891511525953390_n.jpg?oh=2544592d19e5d924826c0d6ea570b417&oe=5ACC12F2" style="width:100%">
+        </div>
+        <div class="mySlides">
+            <div class="numbertext">13 / 14</div>
+            <img src="https://scontent.fyyc4-1.fna.fbcdn.net/v/t1.0-9/11694860_642935282509572_6063954343582750616_n.jpg?oh=d23f07e78a31e48f0ea0613809900733&oe=5AC4287E" style="width:100%">
+        </div>
+        <div class="mySlides">
+            <div class="numbertext">14 / 14</div>
+            <img src="https://scontent.fyyc4-1.fna.fbcdn.net/v/t1.0-9/10615552_495974590538976_7090109560784755939_n.jpg?oh=991c1f22d28bcb723a699c2402102d6a&oe=5ABD4507" style="width:100%">
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">❮</a>
+        <a class="next" onclick="plusSlides(1)">❯</a>
+
+        <div class="caption-container">
+            <p id="caption"></p>
+        </div>
+
+        <div class="row">
+            <div class="column">
+                <img class="demo cursor" src="https://scontent.fyyc4-1.fna.fbcdn.net/v/t31.0-8/194989_223747824428322_205754554_o.jpg?oh=a4be18c38f01b87497ed6c208919ee1a&oe=5AD27A25" style="width:100%" onclick="currentSlide(1)" >
+            </div>
+            <div class="column">
+                <img class="demo cursor" src="https://scontent.fyyc4-1.fna.fbcdn.net/v/t1.0-9/58629_223759614427143_135690112_n.jpg?oh=8e12b28fdafc53ba471369947e720213&oe=5AB38134" style="width:100%" onclick="currentSlide(2)" >
+            </div>
+            <div class="column">
+                <img class="demo cursor" src="https://scontent.fyyc4-1.fna.fbcdn.net/v/t31.0-8/1264128_416444881825281_199312143_o.jpg?oh=7a84a84e5c98675adb95de5ad6eaa5f2&oe=5AB9734D" style="width:100%" onclick="currentSlide(3)" >
+            </div>
+            <div class="column">
+                <img class="demo cursor" src="https://scontent.fyyc4-1.fna.fbcdn.net/v/t1.0-9/537875_223759417760496_1185323917_n.jpg?oh=27c4ef3846299360889a1500f19088df&oe=5AC3A01A" style="width:100%" onclick="currentSlide(4)" >
+            </div>
+            <div class="column">
+                <img class="demo cursor" src="https://scontent.fyyc4-1.fna.fbcdn.net/v/t1.0-9/13260025_781841071952325_237179310632671073_n.jpg?oh=6c49ef762c1ca3446c4092cb4cad78e0&oe=5ABDCB5F" style="width:100%" onclick="currentSlide(5)" >
+            </div>
+            <div class="column">
+                <img class="demo cursor" src="https://scontent.fyyc4-1.fna.fbcdn.net/v/t1.0-9/13221648_781841025285663_6143779057323927002_n.jpg?oh=5eb80ea8bcce984af8430380c019d45b&oe=5ABA318D" style="width:100%" onclick="currentSlide(6)" >
+            </div>
+            <div class="column">
+                <img class="demo cursor" src="https://scontent.fyyc4-1.fna.fbcdn.net/v/t1.0-9/13244767_781840898619009_5143474085788552677_n.jpg?oh=dbd6b3ada6973ce2dbc2a524d476e66b&oe=5AD10FB8" style="width:100%" onclick="currentSlide(7)" >
+            </div>
+            <div class="column">
+                <img class="demo cursor" src="https://scontent.fyyc4-1.fna.fbcdn.net/v/t31.0-8/1116137_326279237508513_1112929107_o.jpg?oh=494878ccbdf2e20f307d856ebe5a6e1d&oe=5AD4E037" style="width:100%" onclick="currentSlide(8)" >
+            </div>
+            <div class="column">
+                <img class="demo cursor" src="https://scontent.fyyc4-1.fna.fbcdn.net/v/t1.0-9/10570348_487079378095164_6934831621949232926_n.jpg?oh=9324623b0cdbb354360c3116eee59799&oe=5ACF40E3" style="width:100%" onclick="currentSlide(9)" >
+            </div>
+            <div class="column">
+                <img class="demo cursor" src="https://scontent.fyyc4-1.fna.fbcdn.net/v/t1.0-9/13230060_781840938619005_5063998434752121489_n.jpg?oh=08efab7a975f861007bed49fbb968783&oe=5AC8C376" style="width:100%" onclick="currentSlide(10)" >
+            </div>
+            <div class="column">
+                <img class="demo cursor" src="https://scontent.fyyc4-1.fna.fbcdn.net/v/t1.0-9/10603703_487940468009055_2836829722587862704_n.jpg?oh=90d63cf1c2a449acbf201475a52a7067&oe=5ACCD92D" style="width:100%" onclick="currentSlide(11)" >
+            </div>
+            <div class="column">
+                <img class="demo cursor" src="https://scontent.fyyc4-1.fna.fbcdn.net/v/t1.0-9/11283_495926220543813_1409891511525953390_n.jpg?oh=2544592d19e5d924826c0d6ea570b417&oe=5ACC12F2" style="width:100%" onclick="currentSlide(12)" >
+            </div>
+            <div class="column">
+                <img class="demo cursor" src="https://scontent.fyyc4-1.fna.fbcdn.net/v/t1.0-9/11694860_642935282509572_6063954343582750616_n.jpg?oh=d23f07e78a31e48f0ea0613809900733&oe=5AC4287E" style="width:100%" onclick="currentSlide(13)" >
+            </div>
+            <div class="column">
+                <img class="demo cursor" src="https://scontent.fyyc4-1.fna.fbcdn.net/v/t1.0-9/10615552_495974590538976_7090109560784755939_n.jpg?oh=991c1f22d28bcb723a699c2402102d6a&oe=5ABD4507" style="width:100%" onclick="currentSlide(14)" >
+            </div>
+        </div>
+    </div>
+
+
+    <!--contact page-->
+    <div class="contact">
+        <h1>Contact HarroW</h1>
+        <h5>Lorne & Corinne Worrall
+            <ul class="fa-ul">
+                <li><em>Owner / Operator</em></li>
+                <li><i class="fa fa-mobile"></i>(403) 507-9315</li>
+                <li><i class="fa fa-mobile"></i>(403) 638-2933</li>
+                <li><i class="fa fa-envelope"></i><a href="mailto:harrow@xplornet.com">harrow@xplornet.com</a></li>
+                <li><i class="fa fa-address-card-o"></i>Box 1716 Sundre, Alberta T0M 1X0</li>
+            </ul>
+        </h5>
+    </div>
+
+    <a id="backtotop">Back to Top</a>
+
+    <div class="footer">
+        <img class="logo" src="https://scontent.fyyc4-1.fna.fbcdn.net/v/t1.0-9/25398718_10154990128192321_7186177683323282119_n.jpg?oh=a0ccb5c4068da11693cc27392de41230&oe=5ACE57B2"/>
+    </div>
+
+
+    <script>
+
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("demo");
+            var captionText = document.getElementById("caption");
+            if (n > slides.length) {slideIndex = 1}
+            if (n < 1) {slideIndex = slides.length}
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex-1].style.display = "block";
+            dots[slideIndex-1].className += " active";
+            captionText.innerHTML = dots[slideIndex-1].alt;
+        }
+
+    </script>
+
+    <script>
+
+
+        $(".downArrow").click(function(){
+            $("html, body").animate({ scrollTop: $('.info').offset().top }, 1000);
+        });
+
+        $("#backtotop").click(function(){
+            $("html, body").animate({ scrollTop: $('.heroimg').offset().top }, 1000);
+        });
+
+
+
+    </script>
+
+
+
+</body>
+</html>
