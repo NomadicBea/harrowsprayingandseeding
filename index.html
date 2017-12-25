@@ -28,6 +28,17 @@
             background-size: cover;
             z-index: -99;
         }
+        
+       .snowimg {
+            background-image: url("https://images.unsplash.com/photo-1485123263479-f5ea30a2f92d?auto=format&fit=crop&w=1334&q=80");
+            min-height: 100%;
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            z-index: -99;
+        }
+        
         .logo{
             width:30%;
             margin: 0 auto .2em auto;
@@ -37,18 +48,20 @@
         }
         @media (max-width: 415px) {
             #logo {
-                padding-top: 30%;
-                width: 60%;
+                padding-top: 50%;
+                width: 80%;
             }
             .heroimg{
                 width: 100%;
-                height: auto;
-            }
-            .snowimg: {
+                max-height: 700px;
+                background-attachment: scroll;
+                }
+            .snowimg {
                 width: 100%;
-                height: auto;
+                max-height: 700px;
+                background-attachment: scroll;
+                }
             }
-          }
 
         .downArrow{
             position: absolute;
@@ -76,15 +89,7 @@
             margin-top: 0px;
             margin: 7%;
         }
-        .snowimg {
-            background-image: url("https://images.unsplash.com/photo-1485123263479-f5ea30a2f92d?auto=format&fit=crop&w=1334&q=80");
-            min-height: 100%;
-            background-attachment: fixed;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-            z-index: -99;
-        }
+
         .services {
             height: 350px;
             margin-top: 0px;
@@ -239,7 +244,7 @@
         }
 
         .footer > .logo {
-            width:100px;
+            width:20%;
             margin: 0 auto .2em auto;
             display: block;
             z-index: 99;
