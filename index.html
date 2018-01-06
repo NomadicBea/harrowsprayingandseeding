@@ -2,15 +2,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    
+
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-111599300-1"></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'UA-111599300-1');
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-111599300-1');
     </script>
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -22,16 +21,16 @@
     <meta name="description" content="Owned and operated by the Worrall family, we offer a range of services within
                                     Southern Alberta including vegetation control, mowing, snow removal, and sanding. ">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <style>
-  
+
         body, html {
             width: 100%;
             height: 100%;
             margin: 0;
         }
         .heroimg {
-            background-image: url("https://images.unsplash.com/photo-1470434158598-88e7ad324132?auto=format&fit=crop&w=2252&q=80&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D");
+            background-image: url("HarrowHero.JPG");
             min-height: 100%;
             background-attachment: fixed;
             background-position: center;
@@ -39,23 +38,23 @@
             background-size: cover;
             z-index: -99;
         }
-        
-       .snowimg {
-            background-image: url("https://images.unsplash.com/photo-1485123263479-f5ea30a2f92d?auto=format&fit=crop&w=1334&q=80");
-            min-height: 100%;
-            background-attachment: fixed;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-            z-index: -99;
+
+        .layer{
+            background-color: rgba(255, 255, 255, 0.2);
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            text-align: center;
         }
-        
+
         .logo{
             width:30%;
             margin: 0 auto .2em auto;
             display: block;
             z-index: 99;
-            padding-top: 23%;
+            padding-top: 15%;
         }
         @media (max-width: 770px) {
             .logo {
@@ -66,46 +65,52 @@
                 width: 100%;
                 max-height: 100%;
                 background-attachment: scroll;
-                }
-            .snowimg {
-                width: 100%;
-                max-height: 100%;
-                background-attachment: scroll;
-                }
             }
 
+        }
         .downArrow{
             position: absolute;
             color: #ffffff;
             color: rgba(255, 255, 255, 0.7);
-            position: absolute;
             bottom: 10px;
             left:50%;
             margin-left: -30px;
             -o-transition:.3s;
-            -ms-transition:.3s;
             -moz-transition:.3s;
             -webkit-transition:.3s;
             transition:.3s;
             font-size:1.5em;
         }
-
         .downArrow:hover{
             color: #ffffff;
             color: rgba(255, 255, 255, 1);
         }
 
+
+
         .info {
-            height: auto;
-            margin-top: 0px;
-            margin: 7%;
+            height: 100%;
+            margin: 0 7% 0 7%;
+        }
+        .info>h1{
+            padding-top: 12%;
+        }
+
+        .infobox {
+            height: 120%;
+            width: 100%;
+            background-color: whitesmoke;
         }
 
         .services {
-            height: 350px;
-            margin-top: 0px;
-            margin: 7%;
+
+            margin: 0 15% 0 15%;
         }
+
+        .services>h1{
+            padding-top: 5%;
+        }
+
         h1 {
             font-family: 'Merriweather', serif;
             text-align: center;
@@ -131,51 +136,44 @@
             background-color: snow;
             margin-top: 10%;
         }
-
         td, th {
             border: 1px solid #3d5b86;
             text-align: left;
             padding: 3px;
         }
-
         td p{
             font-size: 1em;
         }
-
         tr:nth-child(even) {
-            background-color: #bf9b30;
+            background-color: rgba(146, 144, 140, 0.3);
             color: white;
         }
         th{
-            font-size: 1em;
+            font-size: 2em;
+            text-align: center;
         }
         td{
             font-size: 1em;
         }
-
         #gallery{
             border-top: 1px solid #bf9b30;
-            margin: 10% 7% 0 7%;
+            margin: 0 7% 0 7%;
             padding-top: 10%;
         }
-
         /* Position the image container (needed to position the left and right arrows) */
         .container {
-            position: relative;
             height: auto;
-            margin: 5% 7% 0 7%;
+            position: relative;
+            margin: 5% 15% 10% 15%;
         }
-
         /* Hide the images by default */
         .mySlides {
             display: none;
         }
-
         /* Add a pointer when hovering over the thumbnail images */
         .cursor {
             cursor: pointer;
         }
-
         /* Next & previous buttons */
         .prev,
         .next {
@@ -192,19 +190,16 @@
             user-select: none;
             -webkit-user-select: none;
         }
-
         /* Position the "next button" to the right */
         .next {
             right: 0;
             border-radius: 3px 0 0 3px;
         }
-
         /* On hover, add a black background color with a little bit see-through */
         .prev:hover,
         .next:hover {
             background-color: rgba(0, 0, 0, 0.8);
         }
-
         /* Number text (1/3 etc) */
         .numbertext {
             color: #f2f2f2;
@@ -213,7 +208,6 @@
             position: absolute;
             top: 0;
         }
-
         /* Container for image text */
         .caption-container {
             text-align: center;
@@ -221,24 +215,20 @@
             padding: 2px 16px;
             color: white;
         }
-
         .row:after {
             content: "";
             display: table;
             clear: both;
         }
-
         /* Six columns side by side */
         .column {
             float: left;
             width: 16.66%;
         }
-
         /* Add a transparency effect for thumnbail images */
         .demo {
             opacity: 0.6;
         }
-
         .active,
         .demo:hover {
             opacity: 1;
@@ -250,25 +240,23 @@
             margin: 20% 7% 20% 7%;
         }
         .footer {
+
             height: auto;
             background-color: #3d5b86;
         }
-
         .footer > .logo {
             width:20%;
             margin: 0 auto .2em auto;
             display: block;
             z-index: 99;
             padding: 7%;
-
         }
-
         #backtotop  {
+            margin-top: 10%;
             font-family: 'Merriweather', serif;
             color: black;
             font-size: 1em;
             margin-left: 10px;
-
         }
         h5 > ul{
             font-size: 1em;
@@ -283,233 +271,276 @@
             color: green;
             cursor: pointer;
         }
-
-
     </style>
 
 
 </head>
 <body>
 
-    <div class="heroimg">
-        <img class="logo" src="https://scontent.fyyc4-1.fna.fbcdn.net/v/t1.0-9/25398718_10154990128192321_7186177683323282119_n.jpg?oh=a0ccb5c4068da11693cc27392de41230&oe=5ACE57B2"/>
+<div class="heroimg">
+    <div class="layer">
+         <img class="logo" src="https://scontent.fyyc4-1.fna.fbcdn.net/v/t1.0-9/25398718_10154990128192321_7186177683323282119_n.jpg?oh=a0ccb5c4068da11693cc27392de41230&oe=5ACE57B2"/>
     </div>
-        <a class="downArrow"><i class="fa fa-angle-double-down fa-3x" aria-hidden="true"></i></a>
+</div>
+<a class="downArrow"><i class="fa fa-angle-double-down fa-3x" aria-hidden="true"></i></a>
 
 <!--Information page-->
 
-    <div class="info">
-        <h1>What We Do</h1>
-        <h6>Oilfield & Land Reclamation<br>
-            Acreage & Small Farms</h6>
-                <p>
-                    Owned and operated by the Worrall family, we offer a range of services within Central Alberta including
-                    vegetation control, mowing, and snow removal. As Certified Agricultural and Industrial pesticide
-                    applicators, our services are ideal for vegetation control for oil leases and plants, CBM wells, pipelines, roadways,
-                    industrial lots, small farms, acreages, and spot spraying pastures.
-                </p>
-                <br>
-                <br>
-                <h6>Company Information</h6>
-                <p>
-                    Certified agricultural/industrial pesticide applicator license<br>
-                    Comply works / INS NETWORLD membership<br>
-                    First aid / H2S Alive / IRP 16 / WHIMS / TDG<br>
-                    WCB Coverage <br>
-                    $5 000 000 commercial and automobile insurance
-                </p>
-    </div>
+<div class="info">
+    <h1>What We Do</h1>
+    <h6>Oilfield & Land Reclamation<br>
+        Acreage & Small Farms</h6>
+    <p>
+        Owned and operated by the Worrall family, we offer a range of services within Central Alberta including
+        vegetation control, mowing, and snow removal. As Certified Agricultural and Industrial pesticide
+        applicators, our services are ideal for vegetation control for oil leases and plants, CBM wells, pipelines, roadways,
+        industrial lots, small farms, acreages, and spot spraying pastures.
+    </p>
+    <br>
+    <br>
+    <h6>Company Information</h6>
+    <p>
+        Certified agricultural/industrial pesticide applicator license<br>
+        Comply works / INS NETWORLD membership<br>
+        First aid / H2S Alive / IRP 16 / WHIMS / TDG<br>
+        WCB Coverage <br>
+        $5 000 000 commercial and automobile insurance
+    </p>
+</div>
 
 
-    <div class="snowimg">
-        <img class="logo" src="https://scontent.fyyc4-1.fna.fbcdn.net/v/t1.0-9/25398718_10154990128192321_7186177683323282119_n.jpg?oh=a0ccb5c4068da11693cc27392de41230&oe=5ACE57B2"/>
-    </div>
 
 
 <!--Price Table-->
-    <div class="services">
-        <h1>Call for Prices</h1>
-        <table>
-            <tr>
-                <th>Services</th>
+<div class="infobox">
+        <div class="services">
+            <h1>Call for Prices</h1>
+                    <h5>Lorne & Corinne Worrall
+                        <ul class="fa-ul">
+                            <li><em>Owner / Operator</em></li>
+                            <li><i class="fa fa-mobile"></i>(403) 507-9315</li>
+                            <li><i class="fa fa-mobile"></i>(403) 638-2933</li>
+                            <li><i class="fa fa-envelope"></i><a href="mailto:harrow@xplornet.com">harrow@xplornet.com</a></li>
+                            <li><i class="fa fa-address-card-o"></i>Box 1716 Sundre, Alberta T0M 1X0</li>
+                        </ul>
+                    </h5>
+            <table>
+                <tr>
+                    <th>Services</th>
                 </tr>
-                    <tr>
-                        <td>Vegetation Control<br>
+                <tr>
+                    <td>Vegetation Control<br>
                         <p>Truck Mount Sprayers<br>
                             John Deere Gator Side by Side<br>
                             100 horsepower Yanmar Crawler</p></td>
-                    </tr>
-                    <tr>
-                        <td>Mowing <br>
+                </tr>
+                <tr>
+                    <td>Mowing <br>
                         <p> John Deere Tractor with 7ft mower<br>
                             String Trim</p></td>
-                    </tr>
-                    <tr>
-                        <td>Snow Removal<br>
-                            <p>Truck Mount BOSS Plow</p></td>
-                    </tr>
-        </table>
-    </div>
+                </tr>
+                <tr>
+                    <td>Snow Removal<br>
+                        <p>Truck Mount BOSS Plow</p></td>
+                </tr>
+            </table>
+        </div>
+</div>
 
-        <!--contact page-->
-    <div class="contact">
-        <h1>Contact HarroW</h1>
-        <h5>Lorne & Corinne Worrall
-            <ul class="fa-ul">
-                <li><em>Owner / Operator</em></li>
-                <li><i class="fa fa-mobile"></i>(403) 507-9315</li>
-                <li><i class="fa fa-mobile"></i>(403) 638-2933</li>
-                <li><i class="fa fa-envelope"></i><a href="mailto:harrow@xplornet.com">harrow@xplornet.com</a></li>
-                <li><i class="fa fa-address-card-o"></i>Box 1716 Sundre, Alberta T0M 1X0</li>
-            </ul>
-        </h5>
-    </div>
+
 
 <!--Slide Show-->
-    <h1 id="gallery" style="text-align:center">Gallery</h1>
+<h1 id="gallery" style="text-align:center">Gallery</h1>
 
-    <div class="container">
-        <div class="mySlides">
-            <div class="numbertext">1 / 10</div>
-            <img src="https://scontent.fyyc4-1.fna.fbcdn.net/v/t31.0-8/194989_223747824428322_205754554_o.jpg?oh=a4be18c38f01b87497ed6c208919ee1a&oe=5AD27A25" style="width:100%">
-        </div>
-
-        <div class="mySlides">
-            <div class="numbertext">2 / 10</div>
-            <img src="https://scontent.fyyc4-1.fna.fbcdn.net/v/t1.0-9/58629_223759614427143_135690112_n.jpg?oh=8e12b28fdafc53ba471369947e720213&oe=5AB38134" style="width:100%">
-        </div>
-
-        <div class="mySlides">
-            <div class="numbertext">3 / 10</div>
-            <img src="https://scontent.fyyc4-1.fna.fbcdn.net/v/t31.0-8/1264128_416444881825281_199312143_o.jpg?oh=7a84a84e5c98675adb95de5ad6eaa5f2&oe=5AB9734D" style="width:100%">
-        </div>
-
-        <div class="mySlides">
-            <div class="numbertext">4 / 10</div>
-            <img src="https://scontent.fyyc4-1.fna.fbcdn.net/v/t1.0-9/537875_223759417760496_1185323917_n.jpg?oh=27c4ef3846299360889a1500f19088df&oe=5AC3A01A" style="width:100%">
-        </div>
-
-        <div class="mySlides">
-            <div class="numbertext">5 / 10</div>
-            <img src="https://scontent.fyyc4-1.fna.fbcdn.net/v/t1.0-9/13260025_781841071952325_237179310632671073_n.jpg?oh=6c49ef762c1ca3446c4092cb4cad78e0&oe=5ABDCB5F" style="width:100%">
-        </div>
-
-        <div class="mySlides">
-            <div class="numbertext">6 / 10</div>
-            <img src="https://scontent.fyyc4-1.fna.fbcdn.net/v/t1.0-9/13221648_781841025285663_6143779057323927002_n.jpg?oh=5eb80ea8bcce984af8430380c019d45b&oe=5ABA318D" style="width:100%">
-        </div>
-        <div class="mySlides">
-            <div class="numbertext">7 / 10</div>
-            <img src="https://scontent.fyyc4-1.fna.fbcdn.net/v/t1.0-9/13244767_781840898619009_5143474085788552677_n.jpg?oh=dbd6b3ada6973ce2dbc2a524d476e66b&oe=5AD10FB8" style="width:100%">
-        </div>
-        <div class="mySlides">
-            <div class="numbertext">8 / 10</div>
-            <img src="https://scontent.fyyc4-1.fna.fbcdn.net/v/t31.0-8/1116137_326279237508513_1112929107_o.jpg?oh=494878ccbdf2e20f307d856ebe5a6e1d&oe=5AD4E037" style="width:100%">
-        </div>
-        <div class="mySlides">
-            <div class="numbertext">9 / 10</div>
-            <img src="https://scontent.fyyc4-1.fna.fbcdn.net/v/t1.0-9/13230060_781840938619005_5063998434752121489_n.jpg?oh=08efab7a975f861007bed49fbb968783&oe=5AC8C376" style="width:100%">
-        </div>
-        <div class="mySlides">
-            <div class="numbertext">10 / 10</div>
-            <img src="https://scontent.fyyc4-1.fna.fbcdn.net/v/t1.0-9/11694860_642935282509572_6063954343582750616_n.jpg?oh=d23f07e78a31e48f0ea0613809900733&oe=5AC4287E" style="width:100%">
-        </div>
-
-        <a class="prev" onclick="plusSlides(-1)">❮</a>
-        <a class="next" onclick="plusSlides(1)">❯</a>
-
-        <div class="caption-container">
-            <p id="caption"></p>
-        </div>
-
-        <div class="row">
-            <div class="column">
-                <img class="demo cursor" src="https://scontent.fyyc4-1.fna.fbcdn.net/v/t31.0-8/194989_223747824428322_205754554_o.jpg?oh=a4be18c38f01b87497ed6c208919ee1a&oe=5AD27A25" style="width:100%" onclick="currentSlide(1)" >
-            </div>
-            <div class="column">
-                <img class="demo cursor" src="https://scontent.fyyc4-1.fna.fbcdn.net/v/t1.0-9/58629_223759614427143_135690112_n.jpg?oh=8e12b28fdafc53ba471369947e720213&oe=5AB38134" style="width:100%" onclick="currentSlide(2)" >
-            </div>
-            <div class="column">
-                <img class="demo cursor" src="https://scontent.fyyc4-1.fna.fbcdn.net/v/t31.0-8/1264128_416444881825281_199312143_o.jpg?oh=7a84a84e5c98675adb95de5ad6eaa5f2&oe=5AB9734D" style="width:100%" onclick="currentSlide(3)" >
-            </div>
-            <div class="column">
-                <img class="demo cursor" src="https://scontent.fyyc4-1.fna.fbcdn.net/v/t1.0-9/537875_223759417760496_1185323917_n.jpg?oh=27c4ef3846299360889a1500f19088df&oe=5AC3A01A" style="width:100%" onclick="currentSlide(4)" >
-            </div>
-            <div class="column">
-                <img class="demo cursor" src="https://scontent.fyyc4-1.fna.fbcdn.net/v/t1.0-9/13260025_781841071952325_237179310632671073_n.jpg?oh=6c49ef762c1ca3446c4092cb4cad78e0&oe=5ABDCB5F" style="width:100%" onclick="currentSlide(5)" >
-            </div>
-            <div class="column">
-                <img class="demo cursor" src="https://scontent.fyyc4-1.fna.fbcdn.net/v/t1.0-9/13221648_781841025285663_6143779057323927002_n.jpg?oh=5eb80ea8bcce984af8430380c019d45b&oe=5ABA318D" style="width:100%" onclick="currentSlide(6)" >
-            </div>
-            <div class="column">
-                <img class="demo cursor" src="https://scontent.fyyc4-1.fna.fbcdn.net/v/t1.0-9/13244767_781840898619009_5143474085788552677_n.jpg?oh=dbd6b3ada6973ce2dbc2a524d476e66b&oe=5AD10FB8" style="width:100%" onclick="currentSlide(7)" >
-            </div>
-            <div class="column">
-                <img class="demo cursor" src="https://scontent.fyyc4-1.fna.fbcdn.net/v/t31.0-8/1116137_326279237508513_1112929107_o.jpg?oh=494878ccbdf2e20f307d856ebe5a6e1d&oe=5AD4E037" style="width:100%" onclick="currentSlide(8)" >
-            </div>
-            <div class="column">
-                <img class="demo cursor" src="https://scontent.fyyc4-1.fna.fbcdn.net/v/t1.0-9/13230060_781840938619005_5063998434752121489_n.jpg?oh=08efab7a975f861007bed49fbb968783&oe=5AC8C376" style="width:100%" onclick="currentSlide(9)" >
-            </div>
-            <div class="column">
-                <img class="demo cursor" src="https://scontent.fyyc4-1.fna.fbcdn.net/v/t1.0-9/11694860_642935282509572_6063954343582750616_n.jpg?oh=d23f07e78a31e48f0ea0613809900733&oe=5AC4287E" style="width:100%" onclick="currentSlide(10)" >
-            </div>
-        </div>
+<div class="container">
+    <div class="mySlides">
+        <div class="numbertext">1 / 18</div>
+        <img src="https://scontent.fyyc4-1.fna.fbcdn.net/v/t31.0-8/194989_223747824428322_205754554_o.jpg?oh=a4be18c38f01b87497ed6c208919ee1a&oe=5AD27A25" style="width:100%">
     </div>
 
-    <a id="backtotop">Back to Top</a>
+    <div class="mySlides">
+        <div class="numbertext">2 / 18</div>
+        <img src="https://scontent.fyyc4-1.fna.fbcdn.net/v/t1.0-9/58629_223759614427143_135690112_n.jpg?oh=8e12b28fdafc53ba471369947e720213&oe=5AB38134" style="width:100%">
+    </div>
 
-    <div class="footer">
-        <img class="logo" src="https://scontent.fyyc4-1.fna.fbcdn.net/v/t1.0-9/25398718_10154990128192321_7186177683323282119_n.jpg?oh=a0ccb5c4068da11693cc27392de41230&oe=5ACE57B2"/>
+    <div class="mySlides">
+        <div class="numbertext">3 / 18</div>
+        <img src="https://scontent.fyyc4-1.fna.fbcdn.net/v/t31.0-8/1264128_416444881825281_199312143_o.jpg?oh=7a84a84e5c98675adb95de5ad6eaa5f2&oe=5AB9734D" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+        <div class="numbertext">4 / 18</div>
+        <img src="https://scontent.fyyc4-1.fna.fbcdn.net/v/t1.0-9/537875_223759417760496_1185323917_n.jpg?oh=27c4ef3846299360889a1500f19088df&oe=5AC3A01A" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+        <div class="numbertext">5 / 18</div>
+        <img src="https://scontent.fyyc4-1.fna.fbcdn.net/v/t1.0-9/13260025_781841071952325_237179310632671073_n.jpg?oh=6c49ef762c1ca3446c4092cb4cad78e0&oe=5ABDCB5F" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+        <div class="numbertext">6 / 18</div>
+        <img src="https://scontent.fyyc4-1.fna.fbcdn.net/v/t1.0-9/13221648_781841025285663_6143779057323927002_n.jpg?oh=5eb80ea8bcce984af8430380c019d45b&oe=5ABA318D" style="width:100%">
+    </div>
+    <div class="mySlides">
+        <div class="numbertext">7 / 18</div>
+        <img src="https://scontent.fyyc4-1.fna.fbcdn.net/v/t1.0-9/13244767_781840898619009_5143474085788552677_n.jpg?oh=dbd6b3ada6973ce2dbc2a524d476e66b&oe=5AD10FB8" style="width:100%">
+    </div>
+    <div class="mySlides">
+        <div class="numbertext">8 / 18</div>
+        <img src="https://scontent.fyyc4-1.fna.fbcdn.net/v/t31.0-8/1116137_326279237508513_1112929107_o.jpg?oh=494878ccbdf2e20f307d856ebe5a6e1d&oe=5AD4E037" style="width:100%">
+    </div>
+    <div class="mySlides">
+        <div class="numbertext">9 / 18</div>
+        <img src="https://scontent.fyyc4-1.fna.fbcdn.net/v/t1.0-9/13230060_781840938619005_5063998434752121489_n.jpg?oh=08efab7a975f861007bed49fbb968783&oe=5AC8C376" style="width:100%">
+    </div>
+    <div class="mySlides">
+        <div class="numbertext">10 / 18</div>
+        <img src="https://scontent.fyyc4-1.fna.fbcdn.net/v/t1.0-9/11694860_642935282509572_6063954343582750616_n.jpg?oh=d23f07e78a31e48f0ea0613809900733&oe=5AC4287E" style="width:100%">
+    </div>
+    <div class="mySlides">
+        <div class="numbertext">11 / 18</div>
+        <img src="Crawler.jpg" style="width:100%">
+    </div>
+    <div class="mySlides">
+        <div class="numbertext">12 / 18</div>
+        <img src="Deere.jpg" style="width:100%">
+    </div>
+    <div class="mySlides">
+        <div class="numbertext">13 / 18</div>
+        <img src="FullSizeRender.jpg" style="width:100%">
+    </div>
+    <div class="mySlides">
+        <div class="numbertext">14 / 18</div>
+        <img src="Gator.JPG" style="width:100%">
+    </div>
+    <div class="mySlides">
+        <div class="numbertext">15 / 18</div>
+        <img src="lease.JPG" style="width:100%">
+    </div>
+    <div class="mySlides">
+        <div class="numbertext">16 / 18</div>
+        <img src="Plow.JPG" style="width:100%">
+    </div>
+    <div class="mySlides">
+        <div class="numbertext">17 / 18</div>
+        <img src="Truckandgator.JPG" style="width:100%">
+    </div>
+    <div class="mySlides">
+        <div class="numbertext">18 / 18</div>
+        <img src="plow2.JPG" style="width:100%">
     </div>
 
 
-    <script>
+    <a class="prev" onclick="plusSlides(-1)">❮</a>
+    <a class="next" onclick="plusSlides(1)">❯</a>
 
-        var slideIndex = 1;
-        showSlides(slideIndex);
+    <div class="caption-container">
+        <p id="caption"></p>
+    </div>
 
-        function plusSlides(n) {
-            showSlides(slideIndex += n);
+    <div class="row">
+        <div class="column">
+            <img class="demo cursor" src="https://scontent.fyyc4-1.fna.fbcdn.net/v/t31.0-8/194989_223747824428322_205754554_o.jpg?oh=a4be18c38f01b87497ed6c208919ee1a&oe=5AD27A25" style="width:100%" onclick="currentSlide(1)" >
+        </div>
+        <div class="column">
+            <img class="demo cursor" src="https://scontent.fyyc4-1.fna.fbcdn.net/v/t1.0-9/58629_223759614427143_135690112_n.jpg?oh=8e12b28fdafc53ba471369947e720213&oe=5AB38134" style="width:100%" onclick="currentSlide(2)" >
+        </div>
+        <div class="column">
+            <img class="demo cursor" src="https://scontent.fyyc4-1.fna.fbcdn.net/v/t31.0-8/1264128_416444881825281_199312143_o.jpg?oh=7a84a84e5c98675adb95de5ad6eaa5f2&oe=5AB9734D" style="width:100%" onclick="currentSlide(3)" >
+        </div>
+        <div class="column">
+            <img class="demo cursor" src="https://scontent.fyyc4-1.fna.fbcdn.net/v/t1.0-9/537875_223759417760496_1185323917_n.jpg?oh=27c4ef3846299360889a1500f19088df&oe=5AC3A01A" style="width:100%" onclick="currentSlide(4)" >
+        </div>
+        <div class="column">
+            <img class="demo cursor" src="https://scontent.fyyc4-1.fna.fbcdn.net/v/t1.0-9/13260025_781841071952325_237179310632671073_n.jpg?oh=6c49ef762c1ca3446c4092cb4cad78e0&oe=5ABDCB5F" style="width:100%" onclick="currentSlide(5)" >
+        </div>
+        <div class="column">
+            <img class="demo cursor" src="https://scontent.fyyc4-1.fna.fbcdn.net/v/t1.0-9/13221648_781841025285663_6143779057323927002_n.jpg?oh=5eb80ea8bcce984af8430380c019d45b&oe=5ABA318D" style="width:100%" onclick="currentSlide(6)" >
+        </div>
+        <div class="column">
+            <img class="demo cursor" src="https://scontent.fyyc4-1.fna.fbcdn.net/v/t1.0-9/13244767_781840898619009_5143474085788552677_n.jpg?oh=dbd6b3ada6973ce2dbc2a524d476e66b&oe=5AD10FB8" style="width:100%" onclick="currentSlide(7)" >
+        </div>
+        <div class="column">
+            <img class="demo cursor" src="https://scontent.fyyc4-1.fna.fbcdn.net/v/t31.0-8/1116137_326279237508513_1112929107_o.jpg?oh=494878ccbdf2e20f307d856ebe5a6e1d&oe=5AD4E037" style="width:100%" onclick="currentSlide(8)" >
+        </div>
+        <div class="column">
+            <img class="demo cursor" src="https://scontent.fyyc4-1.fna.fbcdn.net/v/t1.0-9/13230060_781840938619005_5063998434752121489_n.jpg?oh=08efab7a975f861007bed49fbb968783&oe=5AC8C376" style="width:100%" onclick="currentSlide(9)" >
+        </div>
+        <div class="column">
+            <img class="demo cursor" src="https://scontent.fyyc4-1.fna.fbcdn.net/v/t1.0-9/11694860_642935282509572_6063954343582750616_n.jpg?oh=d23f07e78a31e48f0ea0613809900733&oe=5AC4287E" style="width:100%" onclick="currentSlide(10)" >
+        </div>
+        <div class="column">
+            <img class="demo cursor" src="Crawler.jpg" style="width:100%" onclick="currentSlide(11)" >
+        </div>
+        <div class="column">
+            <img class="demo cursor" src="Deere.jpg" style="width:100%" onclick="currentSlide(12)" >
+        </div>
+        <div class="column">
+            <img class="demo cursor" src="FullSizeRender.jpg" style="width:100%" onclick="currentSlide(13)" >
+        </div>
+        <div class="column">
+            <img class="demo cursor" src="Gator.JPG" style="width:100%" onclick="currentSlide(14)" >
+        </div>
+        <div class="column">
+            <img class="demo cursor" src="lease.JPG" style="width:100%" onclick="currentSlide(15)" >
+        </div>
+        <div class="column">
+            <img class="demo cursor" src="Plow.JPG" style="width:100%" onclick="currentSlide(16)" >
+        </div>
+        <div class="column">
+            <img class="demo cursor" src="Truckandgator.JPG" style="width:100%" onclick="currentSlide(17)" >
+        </div>
+        <div class="column">
+            <img class="demo cursor" src="plow2.JPG" style="width:100%" onclick="currentSlide(18)" >
+        </div>
+
+    </div>
+</div>
+
+<a id="backtotop">Back to Top</a>
+
+<div class="footer">
+    <img class="logo" src="https://scontent.fyyc4-1.fna.fbcdn.net/v/t1.0-9/25398718_10154990128192321_7186177683323282119_n.jpg?oh=a0ccb5c4068da11693cc27392de41230&oe=5ACE57B2"/>
+</div>
+
+
+<script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
+    function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("demo");
+        var captionText = document.getElementById("caption");
+        if (n > slides.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
         }
-
-        function currentSlide(n) {
-            showSlides(slideIndex = n);
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
         }
+        slides[slideIndex-1].style.display = "block";
+        dots[slideIndex-1].className += " active";
+        captionText.innerHTML = dots[slideIndex-1].alt;
+    }
+</script>
 
-        function showSlides(n) {
-            var i;
-            var slides = document.getElementsByClassName("mySlides");
-            var dots = document.getElementsByClassName("demo");
-            var captionText = document.getElementById("caption");
-            if (n > slides.length) {slideIndex = 1}
-            if (n < 1) {slideIndex = slides.length}
-            for (i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";
-            }
-            for (i = 0; i < dots.length; i++) {
-                dots[i].className = dots[i].className.replace(" active", "");
-            }
-            slides[slideIndex-1].style.display = "block";
-            dots[slideIndex-1].className += " active";
-            captionText.innerHTML = dots[slideIndex-1].alt;
-        }
-
-    </script>
-
-    <script>
-
-
-        $(".downArrow").click(function(){
-            $("html, body").animate({ scrollTop: $('.info').offset().top }, 1000);
-        });
-
-        $("#backtotop").click(function(){
-            $("html, body").animate({ scrollTop: $('.heroimg').offset().top }, 1000);
-        });
-
-
-
-    </script>
+<script>
+    $(".downArrow").click(function(){
+        $("html, body").animate({ scrollTop: $('.info').offset().top }, 1000);
+    });
+    $("#backtotop").click(function(){
+        $("html, body").animate({ scrollTop: $('.heroimg').offset().top }, 1000);
+    });
+</script>
 
 
 
