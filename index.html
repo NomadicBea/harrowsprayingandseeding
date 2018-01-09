@@ -56,24 +56,28 @@
             z-index: 99;
             padding-top: 20%;
         }
-        @media (max-width: 770px) {
+        
+        @media screen and (max-width:770px) {
             .logo {
                 padding-top: 40%;
                 width: 60%;
             }
             .heroimg{
-                width: 100%;
-                max-height: 100%;
+                max-width: 100%;
+                height: auto;
                 background-attachment: scroll;
             }
             .info{
-                height:auto;
+                width: 100%;
+                height: auto;
             }
             .infobox{
-                height:auto;
+                width: 100%;
+                height: auto;
             }
 
         }
+        
         .downArrow{
             position: absolute;
             color: #ffffff;
@@ -95,6 +99,7 @@
 
 
         .info {
+            position: absolute;
             height: 100%;
             margin: 0 7% 0 7%;
         }
@@ -103,6 +108,7 @@
         }
 
         .infobox {
+            position: absolute;
             height: 120%;
             width: 100%;
             background-color: whitesmoke;
